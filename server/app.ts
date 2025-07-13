@@ -3,6 +3,7 @@ import cookieParser from "cookie-parser"
 import {config} from "dotenv"
 import fileUpload from "express-fileupload"
 import cors from "cors"
+import userRouter from "../server/routes/user.routes"
 import { dbConnection } from "./database/db"
 const app = express()
 config({path :"./config/config.env"})
@@ -18,5 +19,6 @@ app.use(fileUpload({useTempFiles:true,
   tempFileDir:"./temp/",
 }))
 dbConnection()
+app.use("api/v1/user",userRouter)
 
 export default app
