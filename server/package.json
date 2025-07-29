@@ -4,7 +4,7 @@
   "description": "",
   "main": "server.ts",
   "scripts": {
-  "dev": "nodemon server.ts",
+    "dev": "nodemon server.ts",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
@@ -29,7 +29,7 @@
     "@types/cors": "^2.8.19",
     "@types/express": "^5.0.3",
     "@types/express-fileupload": "^1.5.1",
-    "@types/jsonwebtoken": "^9.0.10",
+    "@types/jsonwebtoken": "^9.0.5",
     "@types/mongoose": "^5.11.97",
     "@types/multer": "^2.0.0",
     "@types/node": "^24.0.10",

@@ -19,6 +19,6 @@ app.use(fileUpload({useTempFiles:true,
   tempFileDir:"./temp/",
 }))
 dbConnection()
-app.use("api/v1/user",userRouter)
+app.use("/api/v1/user",userRouter)
 
 export default app

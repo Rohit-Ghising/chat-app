@@ -2,6 +2,7 @@ import { catchAsyncError } from "../middleware/catchAsyncError.middleware";
 import { Request, Response, NextFunction } from "express";
 import { User } from "../models/user.model";
 import bcrypt from "bcrypt"
+import { generateJWTToken } from "../utils/jwtToken";
 
 export const signup = catchAsyncError(async(req:Request,res:Response,next:NextFunction)=>{
   const {fullName,email,password}= req.body
@@ -32,6 +33,7 @@ const user = await User.create({
     url:""
   }
 })
+generateJWTToken(user,"User registered  succesfully",201,res)
 
 })
 
